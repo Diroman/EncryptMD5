@@ -24,12 +24,6 @@ def GetHash(str):
     dec_mess = hash.hexdigest()
     return dec_mess
 
-def StrInHex(str):
-    auth = ""
-    for i in range(0, len(str), 2):
-        auth += "0x" + str[i:i+2] + ", "
-    print(auth)
-
 def GenNum(list, i):
     for n in range(48, 71):
         list[i] = n
@@ -41,7 +35,7 @@ def GenNum(list, i):
             print(list)
 
 def GetSecret():
-    for i in range(6):                          # длина пароля
+    for i in range(6):
         GenNum([0 for i in range(i+1)], i)
 
 GetSecret()
